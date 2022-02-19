@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ruanxieserver.mapper.TestimonialsMapper">
+    <select id="getAllTestimonials" resultType="com.example.ruanxieserver.pojo.Testimonials">
+        select * from testimonials;
+    </select>
+</mapper>

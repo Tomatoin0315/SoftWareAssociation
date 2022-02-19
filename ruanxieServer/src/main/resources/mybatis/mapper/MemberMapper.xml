@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ruanxieserver.mapper.MemberMapper">
+    <select id="getAllMemberMsg" resultType="com.example.ruanxieserver.pojo.Member">
+        select * from member;
+    </select>
+
+    <select id="getShowingMsg" resultType="com.example.ruanxieserver.pojo.Member">
+        select name,imgUrl,label,major from member;
+    </select>
+
+    <select id="getGrade" resultType="com.example.ruanxieserver.pojo.Member">
+        select distinct grade from member;
+    </select>
+
+    <select id="getMsgByGrade" resultType="com.example.ruanxieserver.pojo.Member" parameterType="java.lang.String">
+        select name,imgUrl,label,major from member where grade = #{grade};
+    </select>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ruanxieserver.mapper.SignMapper">
+    <insert id="saveSign" parameterType="com.example.ruanxieserver.pojo.Sign">
+        insert into sign(name, email, phone, StuId, major, grade, resume)
+        values(#{name},#{email},#{phone},#{StuId},#{major},#{grade},#{resume})
+    </insert>
+
+    <select id="queryAllSign" resultType="com.example.ruanxieserver.pojo.Sign">
+        select * from sign;
+    </select>
+
+
+</mapper>

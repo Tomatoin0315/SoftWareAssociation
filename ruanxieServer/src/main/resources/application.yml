@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ruanxie?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+server:
+  port: 8181
+
+mybatis:
+  # ??
+  type-aliases-package: com.example.pojo
+  # mapper????
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-locations: classpath:mybatis/mybatis-config.xml
